@@ -26,7 +26,7 @@ var LogMessage = function (severity, message) {
  * @example
  *     var logging = require("logging");
  *     // all logs end up in extendables/log
- *     var log = new Log("example.log");
+ *     var log = new logging.Log("example.log");
  *     try {
  *         throw new Error();
  *     } catch (error) {
