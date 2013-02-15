@@ -27,6 +27,7 @@ describe('logging', function () {
         log.warning("Should.");
         log.error("Should.");
         log.critical("Should.");
+        // log.file.encoding = "UTF-8";
         log.file.open("r");
         var logs = log.file.read();
         log.file.close();

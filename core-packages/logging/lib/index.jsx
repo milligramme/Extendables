@@ -44,6 +44,7 @@ var Log = function (name, log_level) {
 	
 	this.truncate = function (forced) {
 		// truncate the logfile if it gets bigger than half a megabyte
+		self.file.encoding = "UTF-8";
 		self.file.open("e");
 		if (forced || self.file.length > 1024*512) {
 			self.file.length = 0;
@@ -52,6 +53,7 @@ var Log = function (name, log_level) {
 	}
 	
 	this.writeln = function (severity, message) {
+		self.file.encoding = "UTF-8";
 		var log = self.file;		
 		var logmessage = new LogMessage(severity, message)
 		log.open("e");
